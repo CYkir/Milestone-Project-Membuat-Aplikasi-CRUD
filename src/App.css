@@ -5,3 +5,16 @@
 .card-img-top {
   border-radius: 12px 12px 0 0;
 }
+
+.product-img {
+  height: 250px;
+  object-fit: cover;
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .product-img {
+    height: 200px;
+  }
+
+}

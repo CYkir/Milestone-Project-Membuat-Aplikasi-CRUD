@@ -5,12 +5,12 @@ const ProductList = ({ products, onEdit, onDelete }) => {
         <div className="row g-3">
           {products.map((p) => (
             <div key={p.id} className="col-6 col-md-4 col-lg-3">
-              <div className="card shadow h-100">
+              <div className="card shadow  " >
                 <img
                   src={p.image}
-                  className="card-img-top p-3"
+                  className="card-img-top p-3 product-img"
                   alt={p.title}
-                  style={{ height: "250px", objectFit: "fill" }}
+                  // style={{ height: "250px", objectFit: "cover" }}
                 />
 
                 <div className="card-body d-flex flex-column">
@@ -20,14 +20,16 @@ const ProductList = ({ products, onEdit, onDelete }) => {
                     {p.description?.slice(0, 30)}...
                   </p>
 
-                  <div className="d-flex justify-content-between ">
-                    <p className="fw-bold">${Number(p.price).toFixed(2)}</p>
-                    <div>
-                      <span class="badge  text-bg-success">{p.category}</span>
-                    </div>
+                  <div className="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
+                    <span className="badge text-bg-success align-self-start align-self-md-auto">
+                      {p.category}
+                    </span>
+                    <p className="fw-bold mb-0">
+                      ${Number(p.price).toFixed(2)}
+                    </p>
                   </div>
 
-                  <div className="mt-auto d-flex gap-2">
+                  <div className="mt-2 d-flex gap-2">
                     <button
                       className="btn btn-warning btn-sm w-50"
                       onClick={() => onEdit(p)}
