@@ -1,5 +1,5 @@
 ## link
-https://relaxed-chebakia-b2de1a.netlify.app/
+https://muzakir-crud.netlify.app/
 
 # React + Vite
 
